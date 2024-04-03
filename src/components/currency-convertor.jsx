@@ -1,7 +1,7 @@
-import {useEffect} from "react";
-import {useState} from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import CurrencyDropdown from "./dropdown";
-import {HiArrowsRightLeft} from "react-icons/hi2";
+import { HiArrowsRightLeft } from "react-icons/hi2";
 
 const CurrencyConverter = () => {
   const [currencies, setCurrencies] = useState([]);
@@ -29,8 +29,6 @@ const CurrencyConverter = () => {
   useEffect(() => {
     fetchCurrencies();
   }, []);
-
-  console.log(currencies);
 
   // Conversion -> https://api.frankfurter.app/latest?amount=1&from=USD&to=INR
   const convertCurrency = async () => {
